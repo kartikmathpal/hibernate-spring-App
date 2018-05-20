@@ -73,8 +73,8 @@ public class HibernateConfigBean {
                         env.getProperty("hibernate.dialect"));
                 setProperty("hibernate.globally_quoted_identifiers",
                         "true");
-                setProperty ("hibernate.show_sql",
-                        env.getProperty ("hibernate.show_sql"));
+//                setProperty ("hibernate.show_sql",
+//                        env.getProperty ("hibernate.show_sql"));
                 setProperty ("hibernate.id.new_generator_mappings","false");
             }
         };

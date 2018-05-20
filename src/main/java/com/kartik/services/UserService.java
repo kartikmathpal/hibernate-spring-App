@@ -16,7 +16,8 @@ public class UserService implements IUserService {
     private String username;
     private String password;
 
-    Logger LOG = LoggerFactory.getLogger(UserService.class);
+    //Logger LOG = LoggerFactory.getLogger(UserService.class);
+    private static Logger LOG = LoggerFactory.getLogger(UserService.class);
 
     @Autowired
     //UserDao userDao = new UserDao();
@@ -40,7 +41,10 @@ public class UserService implements IUserService {
             User user = validateUserDetails(new User(username,password));
             return user;
         } catch (Exception e) {
-            LOG.error ("invalid user credentails {}", e);
+            LOG.error ("invalid user credentials {}", e);
+//            LOG.info ("\n\n\n\n\n");
+//            e.printStackTrace ();
+
             throw new Exception ("invalid user Credentials");
         }
 

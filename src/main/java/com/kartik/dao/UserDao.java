@@ -38,7 +38,7 @@ public class UserDao implements IUserDao {
                 .uniqueResult ();
 
         if (user == null) {
-            throw new Exception ("User not Found");
+            throw new Exception ("User with provided credentials does not exists");
         } else {
             return user;
         }
